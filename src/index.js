@@ -39,4 +39,58 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+// this is where I put my code!
+
+const logoImage = document.querySelector('#logo-img')
+logoImage.src = siteContent['images']['logo-img']
+
+const ctaImage = document.querySelector('#cta-img')
+ctaImage.setAttribute('src', siteContent['images']['cta-img'])
+
+const middleImage = document.querySelector('#middle-img')
+middleImage.setAttribute('src', siteContent['images']['accent-img'])
+
+const ctaHeadline = document.querySelector('.cta h1')
+ctaHeadline.textContent = siteContent.cta.h1
+
+const button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+
+const nav = Array.from(document.querySelectorAll('nav a'));
+nav.forEach(item => item.className = 'italic');
+
+const navText = document.querySelectorAll('nav a')
+navText[0].textContent = siteContent['nav']['nav-item-1']
+navText[1].textContent = siteContent['nav']['nav-item-2']
+navText[2].textContent = siteContent['nav']['nav-item-3']
+navText[3].textContent = siteContent['nav']['nav-item-4']
+navText[4].textContent = siteContent['nav']['nav-item-5']
+navText[5].textContent = siteContent['nav']['nav-item-6']
+
+const footer = document.querySelector('footer a')
+footer.className = 'bold'
+footer.textContent = siteContent['footer']['copyright']
+
+const contactHeadline = document.querySelector('.contact h4');
+contactHeadline.textContent = siteContent['contact']['contact-h4']
+
+const contactInfo = Array.from(document.querySelectorAll('.contact p'))
+contactInfo[0].textContent = siteContent['contact']['address']
+contactInfo[1].textContent = siteContent['contact']['phone']
+contactInfo[2].textContent = siteContent['contact']['email']
+
+const mainContentHeaders = Array.from(document.querySelectorAll('.text-content h4'))
+mainContentHeaders[0].textContent = siteContent['main-content']['features-h4']
+mainContentHeaders[1].textContent = siteContent['main-content']['about-h4']
+mainContentHeaders[2].textContent = siteContent['main-content']['services-h4']
+mainContentHeaders[3].textContent = siteContent['main-content']['product-h4']
+mainContentHeaders[4].textContent = siteContent['main-content']['vision-h4']
+
+const mainContentText = Array.from(document.querySelectorAll('.text-content p'))
+mainContentText[0].textContent = siteContent['main-content']['features-content']
+mainContentText[1].textContent = siteContent['main-content']['about-content']
+mainContentText[2].textContent = siteContent['main-content']['services-content']
+mainContentText[3].textContent = siteContent['main-content']['product-content']
+mainContentText[4].textContent = siteContent['main-content']['vision-content']
+
+
